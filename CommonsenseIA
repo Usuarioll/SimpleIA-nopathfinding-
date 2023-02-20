@@ -1,0 +1,12 @@
+local player = game:GetService("Players").LocalPlayer
+local moveRadius = 10
+
+while true do
+   local newPosition = player.Character.HumanoidRootPart.Position + Vector3.new(
+       math.random(-moveRadius, moveRadius),
+       0,
+       math.random(-moveRadius, moveRadius)
+   )
+   player.Character.Humanoid:MoveTo(newPosition)
+   wait(math.random(2, 5))
+end
